@@ -1,0 +1,58 @@
+<div class="row">
+  <div class="span4">
+
+    <form class="well">
+
+      <div class="control-group">
+        <div class="controls">
+          <div class="input-append">
+            <label {{bindAttr for="view.name.elementId"}} class="control-label">
+              Name
+            </label>
+            {{view AuthorizeNet.CardTextField viewName="name" valueBinding="name" class="span2"}}
+            <span {{bindAttr class="validatedName:add-on"}}>
+                <i {{bindAttr class="nameError:icon-remove:icon-ok"}}></i>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <div class="controls">
+          <div class="input-append">
+            <label {{bindAttr for="view.cardNumber.elementId"}} class="control-label">
+              Number
+            </label>
+            {{view AuthorizeNet.CardTextField viewName="cardNumber" valueBinding="cardNumber" class="input-xlarge"}}
+            <span {{bindAttr class="validatedCardNumber:add-on"}}>
+                <i {{bindAttr class="cardNumberError:icon-remove:icon-ok"}}></i>
+            </span>
+          </div>
+        </div>
+      </div>
+
+      <div class="control-group">
+        <div class="controls">
+          <div class="input-append">
+            <label {{bindAttr for="view.csv.elementId"}} class="control-label">
+              CSV
+            </label>
+            {{view AuthorizeNet.CardTextField viewName="csv" valueBinding="csv" class="input-small"}}
+            <span {{bindAttr class="validatedCsv:add-on"}}>
+                <i {{bindAttr class="csvError:icon-remove:icon-ok"}}></i>
+            </span>
+          </div>
+        </div>
+      </div>
+
+
+
+      <div class="form-actions">
+        <button type="submit" class="btn btn-primary" {{bindAttr disabled="isInValid"}}>
+          Save changes
+        </button>
+        <button class="btn">Cancel</button>
+      </div>
+    </form>
+  </div>
+</div>

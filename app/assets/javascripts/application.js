@@ -12,4 +12,13 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require twitter/bootstrap
+//= require handlebars
+//= require ember
+//= require ember-data
+//= require_self
+//= require authorize_net
+AuthorizeNet = Ember.Application.create({
+  rootElement: '.container'
+});
 //= require_tree .

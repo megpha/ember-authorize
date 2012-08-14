@@ -1,4 +1,7 @@
 AuthorizeNet::Application.routes.draw do
+  root :to => 'credit_cards#index'
+  post "credit_cards/authorize"
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
